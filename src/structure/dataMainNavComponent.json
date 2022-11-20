@@ -1,0 +1,37 @@
+[
+    {
+        "label": "O nas",
+        "click": "ok",
+        "class": "glass p-2",
+        "style": "",
+        "disabled": false
+    },
+    {
+        "label": "O nas",
+        "click": "ok",
+        "class": "glass p-2",
+        "style": "",
+        "disabled": false
+    },
+    {
+        "label": "Techstack",
+        "click": "ok",
+        "class": "glass p-2",
+        "style": "",
+        "disabled": false
+    },
+    {
+        "label": "Kontakt",
+        "click": "ok",
+        "class": "glass p-2",
+        "style": "",
+        "disabled": false
+    },
+    {
+        "label": "Cennik",
+        "click": "ok",
+        "class": "glass p-2",
+        "style": "",
+        "disabled": false
+    }
+]

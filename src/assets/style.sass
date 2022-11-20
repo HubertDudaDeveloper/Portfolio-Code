@@ -1,0 +1,22 @@
+@import './partial/_color'
+@import './partial/_glass'
+@import './partial/_button'
+@import './partial/_hover'
+@import './partial/_hexagon'
+@import './partial/_lightbox'
+@import './partial/_typography'
+@import './partial/_hero'
+@import './partial/_nav'
+
+
+body
+    background: $color-default
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+    label[required="true"]::after
+        content: ' *'
+        color: red
