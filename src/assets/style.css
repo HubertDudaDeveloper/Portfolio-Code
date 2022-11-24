@@ -172,11 +172,20 @@ a:hover,
   font-weight: italic;
   font-family: "Merriweather", serif;
 }
-
-.diamond {
-  position: relative;
+.hero-wrapper {
+  transition: 1s;
+  overflow: hidden;
 }
-.diamond span {
+
+.diamond__up,
+.diamond__down {
+  position: relative;
+  font-size: 2.5rem;
+  line-height: 0px;
+  rotate: 45deg;
+}
+.diamond__up span,
+.diamond__down span {
   rotate: -45deg;
   position: absolute;
   padding: 0;
@@ -185,11 +194,29 @@ a:hover,
   left: 25%;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0 !important;
+}
+
+.fade-enter-from {
+  transform: scale(1.05);
+}
+
 .main__nav {
   position: fixed !important;
   background: rgb(38, 45, 61);
   background: linear-gradient(90deg, rgba(38, 45, 61, 0.6474964986) 100%, rgba(0, 0, 0, 0) 100%);
   z-index: 99;
+}
+.main__nav-list {
+  padding: 0;
+  margin: 0;
 }
 
 body {

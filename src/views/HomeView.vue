@@ -3,9 +3,11 @@
     <MainNavComponent
       :navComponent="navComponent"
     />
-    <HeroComponent/>
+    <HeroComponent
+      :heroComponent="heroComponent"
+    />
     <HexagonComponent
-    class="mb-5 vh-100 d-flex justify-content-center align-items-center"
+      class="mb-5 vh-100 d-flex justify-content-center align-items-center"
     />
     <FormComponent
       v-for="(item, index) in formComponent"
@@ -29,6 +31,7 @@
 </template>
 
 <script setup lang="ts">
+
 import FormComponent from '@/components/FormComponent.vue'
 import HeroComponent from '@/components/HeroComponent.vue'
 import HexagonComponent from '@/components/HexagonComponent.vue'
@@ -38,5 +41,6 @@ import WavesComponent from '@/components/WavesComponent.vue'
 import formComponent from '@/structure/dataFormComponent.json'
 import navComponent from '@/structure/dataMainNavComponent.json'
 import wavesComponent from '@/structure/dataWavesComponent.json'
+import heroComponent from '@/structure/dataHeroComponent.json'
 
 </script>
