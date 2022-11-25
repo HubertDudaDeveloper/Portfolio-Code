@@ -1,36 +1,36 @@
 [
     {
-        "label": "O nas",
+        "label": " O nas",
         "click": "ok",
-        "class": "glass p-2",
+        "class": "glass p-2 bi bi-people",
         "style": "",
         "disabled": false
     },
     {
-        "label": "O nas",
+        "label": " Techstack",
         "click": "ok",
-        "class": "glass p-2",
+        "class": "glass p-2 bi bi-code-square",
         "style": "",
         "disabled": false
     },
     {
-        "label": "Techstack",
+        "label": " Kontakt",
         "click": "ok",
-        "class": "glass p-2",
+        "class": "glass p-2 bi bi-pencil-square",
         "style": "",
         "disabled": false
     },
     {
-        "label": "Kontakt",
+        "label": " Linkedin",
         "click": "ok",
-        "class": "glass p-2",
+        "class": "glass p-2 bi bi-linkedin",
         "style": "",
         "disabled": false
     },
     {
-        "label": "Cennik",
+        "label": " Github",
         "click": "ok",
-        "class": "glass p-2",
+        "class": "glass p-2 bi bi-github",
         "style": "",
         "disabled": false
     }

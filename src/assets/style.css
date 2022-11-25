@@ -1,3 +1,4 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 .glass {
   background: rgba(255, 255, 255, 0.4);
@@ -97,15 +98,15 @@ a:hover,
 }
 
 .top.back {
-  border-bottom: 60px solid #0099ff;
+  border-bottom: 60px solid #b2fcfb;
 }
 
 .middle.back {
-  background: #0099ff;
+  background: #b2fcfb;
 }
 
 .bottom.back {
-  border-top: 60px solid #0099ff;
+  border-top: 60px solid #b2fcfb;
 }
 
 @media screen and (max-width: 850px) {
@@ -146,6 +147,22 @@ a:hover,
     gap: 15px !important;
   }
 }
+button,
+a {
+  transition: 0.5s;
+}
+button:hover *,
+a:hover * {
+  color: #b2fcfb;
+}
+
+.bi {
+  transition: 0.5s;
+}
+.bi:hover::before {
+  color: #b2fcfb;
+}
+
 .hero {
   grid-template-areas: "a";
 }
@@ -176,6 +193,9 @@ a:hover,
   transition: 1s;
   overflow: hidden;
 }
+.hero .hero_btn {
+  font-size: 3rem;
+}
 
 .diamond__up,
 .diamond__down {
@@ -184,14 +204,9 @@ a:hover,
   line-height: 0px;
   rotate: 45deg;
 }
-.diamond__up span,
-.diamond__down span {
+.diamond__up::before,
+.diamond__down::before {
   rotate: -45deg;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  top: 50%;
-  left: 25%;
 }
 
 .fade-enter-active,
@@ -208,6 +223,10 @@ a:hover,
   transform: scale(1.05);
 }
 
+.fade-leave-to {
+  transform: scale(1);
+}
+
 .main__nav {
   position: fixed !important;
   background: rgb(38, 45, 61);
@@ -217,6 +236,9 @@ a:hover,
 .main__nav-list {
   padding: 0;
   margin: 0;
+}
+.main__nav .bi {
+  font-size: 1.5rem;
 }
 
 body {

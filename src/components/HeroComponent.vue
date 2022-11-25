@@ -14,26 +14,24 @@
             <div class="shadow col-12"></div>
             <section class="hero__container col-12 d-flex flex-column flex-sm-row justify-content-evenly justify-content-sm-between align-items-center row" >
                 <section class="col-8 d-flex flex-column align-items-center text-white">
-                    <h2>
+                    <h2 class="display-2">
                         {{item.title}}
                     </h2>
-                    <p>
+                    <p class="display-4">
                         {{item.p}}
                     </p>
                     <ButtonComponent
                         :label="''"
-                        :customClass="''"
+                        :customClass="`hero_btn ${item.button.class}`"
                     />
                 </section>
                 <section class="col-4 d-flex gap-sm-1 gap-5 flex-row-reverse flex-sm-column justify-content-center align-items-center text-white">
                     <ButtonComponent
-                        :label="'→'"
-                        :customClass="'diamond__up p-5 m-2 m-sm-5 glass text-white'"
+                        :customClass="item.nav.front"
                         @click="counterk('inc')"
                     />
                     <ButtonComponent
-                        :label="'←'"
-                        :customClass="'diamond__down p-5 m-2 m-sm-5 glass text-white'"
+                        :customClass="item.nav.back"
                         @click="counterk('dec')"
                     />
                 </section>
