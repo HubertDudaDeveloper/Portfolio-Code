@@ -14,10 +14,10 @@
             <div class="shadow col-12"></div>
             <section class="hero__container col-12 d-flex flex-column flex-sm-row justify-content-evenly justify-content-sm-between align-items-center row" >
                 <section class="col-8 d-flex flex-column align-items-center text-white">
-                    <h2 class="display-2">
+                    <h2 class="display-3">
                         {{item.title}}
                     </h2>
-                    <p class="display-4">
+                    <p class="display-5">
                         {{item.p}}
                     </p>
                     <ButtonComponent

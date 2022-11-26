@@ -4,7 +4,6 @@
       "inputs": [
         {
           "click": "ok()",
-          "style": "cursor: pointer",
           "class": "col-6",
           "label": "Text",
           "placeholder": "Wprowadź imię...",
@@ -14,7 +13,6 @@
         },
         {
           "click": "ok()",
-          "style": "cursor: pointer",
           "class": "col-6",
           "label": "Text",
           "placeholder": "Wprowadź email...",
@@ -26,7 +24,6 @@
       "selects": [
         {
           "click": "ok()",
-          "style": "cursor: pointer",
           "class": "col-6",
           "label": "Text",
           "required": true,
@@ -45,7 +42,6 @@
         },
         {
           "click": "ok()",
-          "style": "cursor: pointer",
           "class": "col-6",
           "label": "Text",
           "required": true,
@@ -67,21 +63,12 @@
         {
           "label": "Wyślij",
           "click": "ok()",
-          "class": "col-3 btn-dark",
-          "style": "",
-          "disabled": true
-        },
-        {
-          "label": "Wyślij",
-          "click": "ok()",
-          "class": "col-3 btn-warning",
-          "style": ""
+          "class": "col-3 btn-custom-primary"
         }
       ],
       "consent": [
         {
           "click": "ok()",
-          "style": "cursor: pointer",
           "class": "col-6",
           "label": "Rodo",
           "placeholder": "",
@@ -91,7 +78,6 @@
         },
         {
           "click": "ok()",
-          "style": "cursor: pointer",
           "class": "col-6",
           "label": "Warunki umowy",
           "placeholder": "",

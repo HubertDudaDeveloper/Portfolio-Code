@@ -15,9 +15,8 @@
                     :disabled="item.disabled"
                 />
                 <ButtonComponent
-                    class="text-white col-3 align-self-center"
-                    :customClass="'glass p-2 bi bi-arrow-bar-left rounded-1'"
-                    :label="''"
+                    class="text-white align-self-center"
+                    :customClass="'glass p-3 bi bi-arrow-bar-left rounded-1'"
                     :disabled="false"
                     @click="resizeBar($event)"
                     v-show="screen"
@@ -47,7 +46,7 @@ const resizeBar = (event) => {
     event.target.style.rotate = '180deg'
   }
 
-  nav.classList.toggle('col-md-2')
+  nav.classList.toggle('col-lg-2')
   before.forEach((item) => {
     item.classList.toggle('d-lg-inline')
   })

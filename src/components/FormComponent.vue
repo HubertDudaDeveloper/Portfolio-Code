@@ -1,5 +1,5 @@
 <template>
-    <form class="col-12 d-flex flex-column justify-content-center align-items-center gap-2" :class="customClass" :style="customStyle">
+    <form class="d-flex flex-column justify-content-center align-items-center gap-2" :class="customClass">
         <h2>{{label}}</h2>
         <InputComponent
             v-for="(item, index) in inputs"

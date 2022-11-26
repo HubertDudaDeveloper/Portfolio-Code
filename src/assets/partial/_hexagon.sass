@@ -7,14 +7,12 @@
 .hex-container.back
     right: unset
     top: unset
-    padding: 0px 150px
 
 .hex-container
     position: absolute
     display: flex
     flex-direction: column
     transform: perspective(1000px) rotateY(340deg) rotateX(30deg)
-    padding: 0px 150px
 
 .hex
     float: left
@@ -77,6 +75,11 @@
 .bottom.back
     border-top: 60px solid  $color-primary
 
+
+@media screen and (max-width: 1250px) 
+    .hex-container
+        scale: 0.75
+        padding: 0 !important
 @media screen and (max-width: 850px) 
     .hex-container
         scale: 0.5

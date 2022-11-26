@@ -6,20 +6,31 @@
     <HeroComponent
       :heroComponent="heroComponent"
     />
-    <HexagonComponent
-      class="mb-5 vh-100 d-flex justify-content-center align-items-center"
-    />
-    <FormComponent
-      v-for="(item, index) in formComponent"
-      :key="index"
-      :label="item.label"
-      :inputs="item.inputs"
-      :selects="item.selects"
-      :buttons="item.buttons"
-      :consent="item.consent"
-      :id="'form_' + index"
-      class="p-5 text-white"
-    />
+    <section class="d-flex flex-sm-row flex-column justify-content-center align-items-center text-white vh-100">
+      <div class="col-2"></div>
+      <article class="col-4 p-5">
+        <h2>Technologie</h2>
+        <p><em>aspiu efyroieuwar fasliku dfhoaiu hewfaerfi ousahdbfo viubhu asphoidujv piasdujfho apisufh oliasudFHO IUQYEW OIASDGHFVO IUASYDpaius fghi</em></p>
+      </article>
+      <div class="col-6 p-5">
+        <HexagonComponent
+          class="mb-5 d-flex justify-content-center align-items-center"
+        />
+      </div>
+    </section>
+    <section class="d-flex flex-sm-row flex-column justify-content-center align-items-center text-white vh-100">
+      <FormComponent
+        v-for="(item, index) in formComponent"
+        :key="index"
+        :label="item.label"
+        :inputs="item.inputs"
+        :selects="item.selects"
+        :buttons="item.buttons"
+        :consent="item.consent"
+        :id="'form_' + index"
+        class="text-white glass vh-50 pt-5 pb-5 col-7 rounded-5"
+      />
+    </section>
     <WavesComponent
       v-for="(item, index) in wavesComponent"
       :key="index"

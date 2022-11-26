@@ -8,6 +8,14 @@
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
+.btn-custom-primary {
+  background-color: #b2fcfb;
+  transition: 0.5s;
+}
+.btn-custom-primary:hover {
+  border: 1px solid #b2fcfb;
+}
+
 button:hover,
 input:hover,
 a:hover,
@@ -26,7 +34,6 @@ a:hover,
 .hex-container.back {
   right: unset;
   top: unset;
-  padding: 0px 150px;
 }
 
 .hex-container {
@@ -34,7 +41,6 @@ a:hover,
   display: flex;
   flex-direction: column;
   transform: perspective(1000px) rotateY(340deg) rotateX(30deg);
-  padding: 0px 150px;
 }
 
 .hex {
@@ -109,6 +115,12 @@ a:hover,
   border-top: 60px solid #b2fcfb;
 }
 
+@media screen and (max-width: 1250px) {
+  .hex-container {
+    scale: 0.75;
+    padding: 0 !important;
+  }
+}
 @media screen and (max-width: 850px) {
   .hex-container {
     scale: 0.5;
