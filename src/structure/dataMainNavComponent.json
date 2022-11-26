@@ -2,35 +2,35 @@
     {
         "label": " O nas",
         "click": "ok",
-        "class": "glass p-2 bi bi-people",
+        "class": "glass p-2 bi bi-people rounded-0",
         "style": "",
         "disabled": false
     },
     {
         "label": " Techstack",
         "click": "ok",
-        "class": "glass p-2 bi bi-code-square",
+        "class": "glass p-2 bi bi-code-square rounded-0",
         "style": "",
         "disabled": false
     },
     {
         "label": " Kontakt",
         "click": "ok",
-        "class": "glass p-2 bi bi-pencil-square",
+        "class": "glass p-2 bi bi-pencil-square rounded-0",
         "style": "",
         "disabled": false
     },
     {
         "label": " Linkedin",
         "click": "ok",
-        "class": "glass p-2 bi bi-linkedin",
+        "class": "glass p-2 bi bi-linkedin rounded-0",
         "style": "",
         "disabled": false
     },
     {
         "label": " Github",
         "click": "ok",
-        "class": "glass p-2 bi bi-github",
+        "class": "glass p-2 bi bi-github rounded-0",
         "style": "",
         "disabled": false
     }

@@ -232,6 +232,8 @@ a:hover * {
   background: rgb(38, 45, 61);
   background: linear-gradient(90deg, rgba(38, 45, 61, 0.6474964986) 100%, rgba(0, 0, 0, 0) 100%);
   z-index: 99;
+  transition: 0.5s;
+  height: 10vh;
 }
 .main__nav-list {
   padding: 0;
@@ -241,6 +243,11 @@ a:hover * {
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 576px) {
+  .main__nav {
+    height: 100vh;
+  }
+}
 body {
   background: #262d3d;
 }
