@@ -4,10 +4,15 @@ $text-marri: 'Merriweather', serif
 
 button,
 a
+    all: unset
+    cursor: pointer
     transition: 0.5s
+
     &:hover *
         color: $color-primary
 .bi
     transition: 0.5s
     &:hover::before
         color: $color-primary
+*
+    font-family: $text-marri

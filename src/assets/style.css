@@ -161,6 +161,8 @@ a:hover,
 }
 button,
 a {
+  all: unset;
+  cursor: pointer;
   transition: 0.5s;
 }
 button:hover *,
@@ -173,6 +175,10 @@ a:hover * {
 }
 .bi:hover::before {
   color: #b2fcfb;
+}
+
+* {
+  font-family: "Merriweather", serif;
 }
 
 .hero {
@@ -260,6 +266,10 @@ a:hover * {
     height: 100vh;
   }
 }
+.footer {
+  background: #333d53;
+}
+
 body {
   background: #262d3d;
 }

@@ -1,11 +1,10 @@
 <template>
-    <form class="d-flex flex-column justify-content-center align-items-center gap-2" :class="customClass">
+    <form class="d-flex flex-column justify-content-center align-items-start gap-2" :class="customClass">
         <h2>{{label}}</h2>
         <InputComponent
             v-for="(item, index) in inputs"
             :key="index"
             :function="item.click"
-            :customStyle="item.style"
             :customClass="item.class"
             :label="item.label"
             :required="item.required"
@@ -18,7 +17,6 @@
             v-for="(item, index) in selects"
             :key="index"
             :function="item.click"
-            :customStyle="item.style"
             :customClass="item.class"
             :label="item.label"
             :option="item.option"
@@ -30,7 +28,6 @@
             v-for="(item, index) in consent"
             :key="index"
             :function="item.click"
-            :customStyle="item.style"
             :customClass="item.class"
             :label="item.label"
             :required="item.required"
@@ -43,8 +40,7 @@
             v-for="(item, index) in buttons"
             :key="index"
             v-on:click="item.click"
-            :customStyle="item.style"
-            :customClass="item.class "
+            :customClass="item.class"
             :label="item.label"
             :disabled="item.disabled"
         />

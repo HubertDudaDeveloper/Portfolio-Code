@@ -1,5 +1,9 @@
 <template>
-    <button :style="customStyle" :class="customClass" class="btn" v-if="true"><span v-if="props.customClass?.includes('bi')" class="d-none d-lg-inline">{{label}}</span><span v-else class="d-inline">{{label}}</span></button>
+    <button :style="customStyle" :class="customClass" class="btn" v-if="true">
+      <strong>
+        <span v-if="props.customClass?.includes('bi')" class="d-none d-lg-inline">{{label}}</span><span v-else class="d-inline">{{label}}</span>
+      </strong>
+    </button>
 </template>
 <script setup lang="ts">
 import { defineProps } from 'vue'

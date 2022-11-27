@@ -1,6 +1,6 @@
 <template>
-    <label :for="id" :required="required"><strong>{{label}}</strong></label>
-    <select :class="customClass" :style="customStyle" :name="label"  :id="id" v-model="select.value" :required="required">
+    <label :for="id" :required="required" :class="label.class">{{label.content}}</label>
+    <select :class="customClass" :name="label"  :id="id" v-model="select.value" :required="required">
         <option v-for="(item, index) in props.option" :key="index" :value="item.value">{{item.value}}</option>
     </select>
 </template>
@@ -11,7 +11,7 @@ const props = defineProps({
   function: String,
   customStyle: String,
   customClass: String,
-  label: String,
+  label: Object,
   required: Boolean,
   type: String,
   option: Array,

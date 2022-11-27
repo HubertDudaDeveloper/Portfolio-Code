@@ -4,8 +4,11 @@
       "inputs": [
         {
           "click": "ok()",
-          "class": "col-6",
-          "label": "Text",
+          "class": "form-control",
+          "label": {
+            "content": "Imię",
+            "class": "p-1"
+          },
           "placeholder": "Wprowadź imię...",
           "required": true,
           "type": "text",
@@ -13,64 +16,44 @@
         },
         {
           "click": "ok()",
-          "class": "col-6",
-          "label": "Text",
+          "class": "form-control",
+          "label": {
+            "content": "Email",
+            "class": "p-1"
+          },
           "placeholder": "Wprowadź email...",
           "required": true,
           "type": "text",
           "disabled": false
-        }
-      ],
-      "selects": [
-        {
-          "click": "ok()",
-          "class": "col-6",
-          "label": "Text",
-          "required": true,
-          "disabled": true,
-          "option": [
-            {
-              "value": "1"
-            },
-            {
-              "value": "2"
-            },
-            {
-              "value": "3"
-            }
-          ]
         },
         {
           "click": "ok()",
-          "class": "col-6",
-          "label": "Text",
+          "class": "form-control",
+          "label": {
+            "content": "Wiadomość",
+            "class": "p-1"
+          },
+          "placeholder": "Wpisz wiadomość...",
           "required": true,
-          "disabled": true,
-          "option": [
-            {
-              "value": "1"
-            },
-            {
-              "value": "2"
-            },
-            {
-              "value": "3"
-            }
-          ]
+          "type": "textarea",
+          "disabled": false
         }
       ],
       "buttons": [
         {
           "label": "Wyślij",
           "click": "ok()",
-          "class": "col-3 btn-custom-primary"
+          "class": "btn-primary align-self-end mt-4 p-3"
         }
       ],
       "consent": [
         {
           "click": "ok()",
-          "class": "col-6",
-          "label": "Rodo",
+          "class": "form-check-input align-self-end",
+          "label": {
+            "content": "Rodo",
+            "class": "p-1 small align-self-end"
+          },
           "placeholder": "",
           "required": false,
           "type": "checkbox",
@@ -78,8 +61,11 @@
         },
         {
           "click": "ok()",
-          "class": "col-6",
-          "label": "Warunki umowy",
+          "class": "form-check-input align-self-end",
+          "label": {
+            "content": "Zgoda",
+            "class": "p-1 small"
+          },
           "placeholder": "",
           "required": true,
           "type": "checkbox",
