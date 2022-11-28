@@ -115,6 +115,9 @@ a:hover,
   border-top: 60px solid #b2fcfb;
 }
 
+@-webkit-keyframes bg;
+
+@keyframes bg;
 @media screen and (max-width: 1250px) {
   .hex-container {
     scale: 0.75;

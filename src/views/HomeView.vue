@@ -86,22 +86,26 @@ import { createElementVNode } from 'vue'
 
 const background = () => {
   setTimeout(() => {
-    for (let k = 0; k <= 25; k++) {
+    for (let k = 0; k <= 50; k++) {
       const waves = document.querySelectorAll('.hexagon')
       console.log(waves)
       waves.forEach((item) => {
         const container = document.createElement('div')
         container.classList.add('position-absolute')
         container.classList.add('d-flex')
-        container.classList.add('vh-100')
         container.classList.add('col-12')
         container.classList.add('justify-content-evenly')
         container.style.top = k * 50 + 'px'
+        container.style.zIndex = '-1'
         for (let i = 0; i <= 25; i++) {
           const bg = document.createElement('i')
-          bg.classList.add('bi-0-circle')
+          bg.classList.add('bi-code-slash')
           bg.classList.add('bi')
           bg.classList.add('icon-animate')
+          bg.style.fontSize = '1.2rem'
+          bg.style.zIndex = '0'
+          bg.style.color = '#b2fcfb'
+          bg.style.opacity = '0.2'
           container.appendChild(bg)
         }
         item.appendChild(container)
