@@ -7,18 +7,18 @@
       :heroComponent="heroComponent"
     />
     <section id="hexagon" class="hexagon position-relative d-flex flex-sm-row flex-column justify-content-center align-items-center text-white vh-100">
-      <div class="col-2 p-5 p-sm-0"></div>
-      <article class="col-sm-4 col-12 p-5 ">
+      <div class="col-2 p-5 p-sm-0 d-none d-sm-block"></div>
+      <article class="col-sm-4 col-12 p-5 h-50">
         <h2>Technologie</h2>
         <p><em>aspiu efyroieuwar fasliku dfhoaiu hewfaerfi ousahdbfo viubhu asphoidujv piasdujfho apisufh oliasudFHO IUQYEW OIASDGHFVO IUASYDpaius fghi</em></p>
       </article>
-      <div class="col-sm-6 col-12 p-sm-5">
+      <div class="col-sm-6 col-12 p-sm-5 h-50">
         <HexagonComponent
           class="mb-5 d-flex justify-content-center align-items-center"
         />
       </div>
     </section>
-    <section class="d-flex flex-sm-row flex-column justify-content-center align-items-start text-white vh-100">
+    <section class="form d-flex flex-sm-row flex-column justify-content-center align-items-start text-white vh-100">
       <div class="col-2"></div>
       <article class="col-sm-4 col-12 p-5">
         <h2>
@@ -26,7 +26,14 @@
             Formularz Kontaktowy
           </strong>
         </h2>
-        <p>ijhasodifjh</p>
+        <p>
+          Wyślij nam wiadomość!
+        </p>
+        <div class="envelope col-9 d-flex flex-column gap-5 position-relative pb-5 mb-5">
+          <i class="bi bi-envelope-fill text-custom-primary display-1 position-absolute "></i>
+          <i class="bi bi-envelope-open-fill text-custom-primary display-1 position-absolute "></i>
+          <i class="bi bi-envelope-paper-fill text-custom-primary display-1 position-absolute"></i>
+        </div>
       </article>
       <div class="col-sm-6 col-12">
         <FormComponent
@@ -86,26 +93,28 @@ import { createElementVNode } from 'vue'
 
 const background = () => {
   setTimeout(() => {
-    for (let k = 0; k <= 50; k++) {
+    const dencity = window.visualViewport.width / 75
+    console.log(window.visualViewport?.height)
+    for (let k = 0; k <= 19; k++) {
       const waves = document.querySelectorAll('.hexagon')
-      console.log(waves)
       waves.forEach((item) => {
         const container = document.createElement('div')
-        container.classList.add('position-absolute')
-        container.classList.add('d-flex')
-        container.classList.add('col-12')
-        container.classList.add('justify-content-evenly')
-        container.style.top = k * 50 + 'px'
-        container.style.zIndex = '-1'
-        for (let i = 0; i <= 25; i++) {
+        container.classList.add('position-absolute', 'd-flex', 'col-12', 'justify-content-center')
+        container.style.cssText = `
+          top: ${k * 5}vh;
+          z-index= -1;
+        `
+        for (let i = 0; i <= dencity; i++) {
           const bg = document.createElement('i')
-          bg.classList.add('bi-code-slash')
-          bg.classList.add('bi')
-          bg.classList.add('icon-animate')
-          bg.style.fontSize = '1.2rem'
-          bg.style.zIndex = '0'
-          bg.style.color = '#b2fcfb'
-          bg.style.opacity = '0.2'
+          bg.classList.add('d-flex', 'bi-code-slash', 'icon-animate', 'bi', 'justify-content-center', 'align-items-center')
+          bg.style.cssText = 'font-size: 1.75rem; z-index: 1; color: #b2fcfb; opacity: 0.05; box-sizing: border-box; width: 100%; align-self: center;'
+          bg.id = `y${i}x${k}-item`
+          bg.addEventListener('mouseover', (event) => {
+            document.getElementById(event.target.id).style.cssText += 'opacity: 1; text-shadow: 0px 0px 20px #b2fcfb;'
+          })
+          bg.addEventListener('mouseout', (event) => {
+            document.getElementById(event.target.id).style.cssText += 'opacity: 0.1; text-shadow: none ;'
+          })
           container.appendChild(bg)
         }
         item.appendChild(container)
@@ -114,4 +123,5 @@ const background = () => {
   }, 500)
 }
 background()
+
 </script>

@@ -1,9 +1,10 @@
 
 .hex-total
     position: relative
+    border-radius: 50%
     display: flex
     justify-content: center
-    height: 65vh
+    z-index: 11
 .hex-container.back
     right: unset
     top: unset
@@ -75,7 +76,11 @@
 .bottom.back
     border-top: 60px solid  $color-primary
 
-@keyframes bg 
+.hexagon .bi
+    &::before
+        align-self: center
+        padding-left: 25%
+        width: 100%
 
 @media screen and (max-width: 1250px) 
     .hex-container

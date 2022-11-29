@@ -1,5 +1,27 @@
-@import 'bootstrap-icons/font/bootstrap-icons.css';
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+button,
+a {
+  all: unset;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover *,
+a:hover * {
+  color: #b2fcfb;
+}
+
+.bi {
+  transition: 0.5s;
+}
+.bi:hover::before {
+  color: #b2fcfb;
+}
+
+* {
+  font-family: "Merriweather", serif;
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -26,9 +48,10 @@ a:hover,
 
 .hex-total {
   position: relative;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
-  height: 65vh;
+  z-index: 11;
 }
 
 .hex-container.back {
@@ -115,9 +138,12 @@ a:hover,
   border-top: 60px solid #b2fcfb;
 }
 
-@-webkit-keyframes bg;
+.hexagon .bi::before {
+  align-self: center;
+  padding-left: 25%;
+  width: 100%;
+}
 
-@keyframes bg;
 @media screen and (max-width: 1250px) {
   .hex-container {
     scale: 0.75;
@@ -162,28 +188,6 @@ a:hover,
     gap: 15px !important;
   }
 }
-button,
-a {
-  all: unset;
-  cursor: pointer;
-  transition: 0.5s;
-}
-button:hover *,
-a:hover * {
-  color: #b2fcfb;
-}
-
-.bi {
-  transition: 0.5s;
-}
-.bi:hover::before {
-  color: #b2fcfb;
-}
-
-* {
-  font-family: "Merriweather", serif;
-}
-
 .hero {
   grid-template-areas: "a";
 }
@@ -273,6 +277,234 @@ a:hover * {
   background: #333d53;
 }
 
+.envelope {
+  -webkit-animation: rail 2s infinite;
+          animation: rail 2s infinite;
+}
+.envelope i:nth-child(1) {
+  -webkit-animation: envelope 7s infinite;
+          animation: envelope 7s infinite;
+  transition: 2s;
+  font-size: 7rem;
+}
+.envelope i:nth-child(2) {
+  -webkit-animation: envelope-open 7s infinite;
+          animation: envelope-open 7s infinite;
+  transition: 2s;
+  font-size: 7rem;
+}
+.envelope i:nth-child(3) {
+  -webkit-animation: envelope-letter 7s infinite;
+          animation: envelope-letter 7s infinite;
+  transition: 2s;
+  font-size: 7rem;
+}
+
+@-webkit-keyframes envelope {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  10% {
+    rotate: 0deg;
+  }
+  15% {
+    opacity: 1;
+    left: 40%;
+    rotate: 15deg;
+    color: #b2fcfb;
+  }
+  30% {
+    opacity: 1;
+    left: 40%;
+    rotate: -15deg;
+    color: #b2fcfb;
+  }
+  35% {
+    rotate: 0deg;
+  }
+  45% {
+    opacity: 0;
+    left: 90%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes envelope {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  10% {
+    rotate: 0deg;
+  }
+  15% {
+    opacity: 1;
+    left: 40%;
+    rotate: 15deg;
+    color: #b2fcfb;
+  }
+  30% {
+    opacity: 1;
+    left: 40%;
+    rotate: -15deg;
+    color: #b2fcfb;
+  }
+  35% {
+    rotate: 0deg;
+  }
+  45% {
+    opacity: 0;
+    left: 90%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes envelope-open {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  30% {
+    opacity: 0;
+    left: 0%;
+  }
+  40% {
+    rotate: 0deg;
+  }
+  45% {
+    opacity: 1;
+    left: 40%;
+    rotate: 15deg;
+    color: #b2fcfb;
+  }
+  60% {
+    opacity: 1;
+    left: 40%;
+    rotate: -15deg;
+    color: #b2fcfb;
+  }
+  65% {
+    rotate: 0deg;
+  }
+  75% {
+    opacity: 0;
+    left: 90%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes envelope-open {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  30% {
+    opacity: 0;
+    left: 0%;
+  }
+  40% {
+    rotate: 0deg;
+  }
+  45% {
+    opacity: 1;
+    left: 40%;
+    rotate: 15deg;
+    color: #b2fcfb;
+  }
+  60% {
+    opacity: 1;
+    left: 40%;
+    rotate: -15deg;
+    color: #b2fcfb;
+  }
+  65% {
+    rotate: 0deg;
+  }
+  75% {
+    opacity: 0;
+    left: 90%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes envelope-letter {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  30% {
+    opacity: 0;
+    left: 0%;
+  }
+  60% {
+    opacity: 0;
+    left: 0%;
+  }
+  70% {
+    rotate: 0deg;
+  }
+  75% {
+    opacity: 1;
+    left: 40%;
+    rotate: 15deg;
+    color: #b2fcfb;
+  }
+  85% {
+    opacity: 1;
+    left: 40%;
+    rotate: -15deg;
+    color: #b2fcfb;
+  }
+  95% {
+    rotate: 0deg;
+  }
+  100% {
+    opacity: 0;
+    left: 90%;
+  }
+}
+@keyframes envelope-letter {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  30% {
+    opacity: 0;
+    left: 0%;
+  }
+  60% {
+    opacity: 0;
+    left: 0%;
+  }
+  70% {
+    rotate: 0deg;
+  }
+  75% {
+    opacity: 1;
+    left: 40%;
+    rotate: 15deg;
+    color: #b2fcfb;
+  }
+  85% {
+    opacity: 1;
+    left: 40%;
+    rotate: -15deg;
+    color: #b2fcfb;
+  }
+  95% {
+    rotate: 0deg;
+  }
+  100% {
+    opacity: 0;
+    left: 90%;
+  }
+}
 body {
   background: #262d3d;
 }
