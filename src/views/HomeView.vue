@@ -7,8 +7,8 @@
       :heroComponent="heroComponent"
     />
     <section id="hexagon" class="hexagon position-relative d-flex flex-sm-row flex-column justify-content-center align-items-center text-white vh-100">
-      <div class="col-2 p-5 p-sm-0 d-none d-sm-block"></div>
-      <article class="col-sm-4 col-12 p-5 h-50">
+      <div class="col-3 p-5 p-sm-0 d-none d-sm-block"></div>
+      <article class="col-sm-3 col-12 p-5 h-50">
         <h2>Technologie</h2>
         <p><em>aspiu efyroieuwar fasliku dfhoaiu hewfaerfi ousahdbfo viubhu asphoidujv piasdujfho apisufh oliasudFHO IUQYEW OIASDGHFVO IUASYDpaius fghi</em></p>
       </article>
@@ -18,18 +18,16 @@
         />
       </div>
     </section>
-    <section class="form d-flex flex-sm-row flex-column justify-content-center align-items-start text-white vh-100">
-      <div class="col-2"></div>
-      <article class="col-sm-4 col-12 p-5">
-        <h2>
-          <strong>
-            Formularz Kontaktowy
-          </strong>
+    <section class="form d-flex flex-sm-row flex-column justify-content-center align-items-center text-white vh-100">
+      <div class="col-3"></div>
+      <article class="glass col-sm-3 col-12 rounded-5 align-self-center mb-5 position-relative start-20 d-flex flex-column justify-content-center align-items-center">
+        <h2 class="col-12 p-4">
+          Tytuł artykuł!
         </h2>
-        <p>
+        <p class="col-12 p-5">
           Wyślij nam wiadomość!
         </p>
-        <div class="envelope col-9 d-flex flex-column gap-5 position-relative pb-5 mb-5">
+        <div class="envelope col-9 d-flex flex-column gap-5 position-relative p-5 mb-5">
           <i class="bi bi-envelope-fill text-custom-primary display-1 position-absolute "></i>
           <i class="bi bi-envelope-open-fill text-custom-primary display-1 position-absolute "></i>
           <i class="bi bi-envelope-paper-fill text-custom-primary display-1 position-absolute"></i>
@@ -39,6 +37,7 @@
         <FormComponent
           v-for="(item, index) in formComponent"
           :key="index"
+          :label="item.label"
           :inputs="item.inputs"
           :selects="item.selects"
           :buttons="item.buttons"
@@ -94,7 +93,6 @@ import { createElementVNode } from 'vue'
 const background = () => {
   setTimeout(() => {
     const dencity = window.visualViewport.width / 75
-    console.log(window.visualViewport?.height)
     for (let k = 0; k <= 19; k++) {
       const waves = document.querySelectorAll('.hexagon')
       waves.forEach((item) => {
@@ -107,21 +105,46 @@ const background = () => {
         for (let i = 0; i <= dencity; i++) {
           const bg = document.createElement('i')
           bg.classList.add('d-flex', 'bi-code-slash', 'icon-animate', 'bi', 'justify-content-center', 'align-items-center')
-          bg.style.cssText = 'font-size: 1.75rem; z-index: 1; color: #b2fcfb; opacity: 0.05; box-sizing: border-box; width: 100%; align-self: center;'
           bg.id = `y${i}x${k}-item`
-          bg.addEventListener('mouseover', (event) => {
-            document.getElementById(event.target.id).style.cssText += 'opacity: 1; text-shadow: 0px 0px 20px #b2fcfb;'
-          })
-          bg.addEventListener('mouseout', (event) => {
-            document.getElementById(event.target.id).style.cssText += 'opacity: 0.1; text-shadow: none ;'
-          })
           container.appendChild(bg)
         }
         item.appendChild(container)
       })
     }
-  }, 500)
+  }, 200)
 }
 background()
 
+const randomId = () => {
+  return new Promise((resolve, reject) => {
+    const maxY = window.visualViewport.width / 75
+    const maxX = 19
+    const min = 0
+    // eslint-disable-next-line
+    let randomY = Math.floor(Math.random() * (maxY - min + 1) + min)
+    // eslint-disable-next-line
+    let randomX = Math.floor(Math.random() * (maxX - min + 1) + min)
+    // eslint-disable-next-line
+    let id = `y${Math.floor(randomY)}x${Math.floor(randomX)}-item`
+    if (id !== undefined || id !== null) {
+      resolve(id)
+    } else {
+      reject(id)
+    }
+  })
+}
+setInterval(() => {
+  randomId()
+    .then((res) => {
+      if (res !== undefined || res !== null) {
+        document.getElementById(res).style.cssText += 'opacity: 1; text-shadow: 0px 0px 20px #b2fcfb;'
+        setTimeout(() => {
+          document.getElementById(res).style.cssText += 'opacity: 0.1; text-shadow: none;'
+        }, 1000)
+      }
+    })
+    .catch((err) => {
+      return err
+    })
+}, 200)
 </script>

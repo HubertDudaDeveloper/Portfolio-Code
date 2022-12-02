@@ -8,14 +8,14 @@ a {
 }
 button:hover *,
 a:hover * {
-  color: #b2fcfb;
+  color: #b2fcfb !important;
 }
 
 .bi {
   transition: 0.5s;
 }
 .bi:hover::before {
-  color: #b2fcfb;
+  color: #b2fcfb !important;
 }
 
 * {
@@ -31,11 +31,11 @@ a:hover * {
 }
 
 .btn-custom-primary {
-  background-color: #b2fcfb;
+  background-color: #b2fcfb !important;
   transition: 0.5s;
 }
 .btn-custom-primary:hover {
-  border: 1px solid #b2fcfb;
+  border: 1px solid #b2fcfb !important;
 }
 
 button:hover,
@@ -82,6 +82,8 @@ a:hover,
 .hex:hover:not(.back) {
   top: -5px;
   left: -5px;
+  filter: drop-shadow(0px 0px 20px #b2fcfb);
+  cursor: default;
 }
 
 .hex:not(.back) {
@@ -127,21 +129,35 @@ a:hover,
 }
 
 .top.back {
-  border-bottom: 60px solid #b2fcfb;
+  border-bottom: 60px solid #b2fcfb !important;
 }
 
 .middle.back {
-  background: #b2fcfb;
+  background: #b2fcfb !important;
 }
 
 .bottom.back {
-  border-top: 60px solid #b2fcfb;
+  border-top: 60px solid #b2fcfb !important;
 }
 
+.hexagon .bi {
+  font-size: 1.75rem;
+  z-index: 1;
+  color: rgb(178, 252, 251);
+  box-sizing: border-box;
+  width: 100%;
+  align-self: center;
+  opacity: 0.1;
+  text-shadow: none;
+}
 .hexagon .bi::before {
   align-self: center;
   padding-left: 25%;
   width: 100%;
+}
+.hexagon .bi:hover {
+  opacity: 1 !important;
+  text-shadow: 0px 0px 20px #b2fcfb;
 }
 
 @media screen and (max-width: 1250px) {
@@ -277,10 +293,16 @@ a:hover,
   background: #333d53;
 }
 
-.envelope {
-  -webkit-animation: rail 2s infinite;
-          animation: rail 2s infinite;
+.form article {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
+
+#form_0 {
+  border-top-left-radius: 0px !important;
+  filter: drop-shadow(-10px 10px 10px black);
+}
+
 .envelope i:nth-child(1) {
   -webkit-animation: envelope 7s infinite;
           animation: envelope 7s infinite;
@@ -312,13 +334,15 @@ a:hover,
     opacity: 1;
     left: 40%;
     rotate: 15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   30% {
     opacity: 1;
     left: 40%;
     rotate: -15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   35% {
     rotate: 0deg;
@@ -344,13 +368,15 @@ a:hover,
     opacity: 1;
     left: 40%;
     rotate: 15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   30% {
     opacity: 1;
     left: 40%;
     rotate: -15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   35% {
     rotate: 0deg;
@@ -379,13 +405,15 @@ a:hover,
     opacity: 1;
     left: 40%;
     rotate: 15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   60% {
     opacity: 1;
     left: 40%;
     rotate: -15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   65% {
     rotate: 0deg;
@@ -414,13 +442,15 @@ a:hover,
     opacity: 1;
     left: 40%;
     rotate: 15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   60% {
     opacity: 1;
     left: 40%;
     rotate: -15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   65% {
     rotate: 0deg;
@@ -453,13 +483,15 @@ a:hover,
     opacity: 1;
     left: 40%;
     rotate: 15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   85% {
     opacity: 1;
     left: 40%;
     rotate: -15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   95% {
     rotate: 0deg;
@@ -489,13 +521,15 @@ a:hover,
     opacity: 1;
     left: 40%;
     rotate: 15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   85% {
     opacity: 1;
     left: 40%;
     rotate: -15deg;
-    color: #b2fcfb;
+    color: #b2fcfb !important;
+    text-shadow: 0px 0px 20px #b2fcfb;
   }
   95% {
     rotate: 0deg;

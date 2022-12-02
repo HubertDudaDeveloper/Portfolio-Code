@@ -9,7 +9,7 @@
                     </div>
                 <div class="hex back">
                     <div class="top back"></div>
-                    <div class="middle back">REACTJS</div>
+                    <div class="middle back">VueJS</div>
                     <div class="bottom back"></div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="hex back">
                     <div class="top back"></div>
-                    <div class="middle back">WORDPRESS</div>
+                    <div class="middle back">REST API</div>
                     <div class="bottom back"></div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     </div>
                 <div class="hex">
                     <div class="top"></div>
-                    <div class="middle">REACTJS</div>
+                    <div class="middle">VueJS</div>
                     <div class="bottom"></div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="hex">
                     <div class="top"></div>
-                    <div class="middle">WORDPRESS</div>
+                    <div class="middle">REST API</div>
                     <div class="bottom"></div>
                 </div>
             </div>
