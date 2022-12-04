@@ -1,11 +1,11 @@
 <template>
-    <nav id="main__nav" class="main__nav col-12 col-sm-1 col-lg-2 vh-25 d-flex justify-content-between justify-content-sm-start flex-row flex-sm-column gap-5">
-        <img src="@/assets/logo_low.png" class=" col-sm-12 mt-2 mt-md-0"/>
+    <nav id="main__nav" class="main__nav col-12 col-lg-1 col-xl-2 vh-25 d-flex justify-content-between justify-content-lg-start flex-row flex-lg-column gap-5">
+        <img src="@/assets/logo_low.png" class=" col-lg-12 mt-2 mt-md-0"/>
             <ButtonComponent
-                class="bi bi-list rounded-0 h-50 m-3 glass text-white d-sm-none d-flex align-self-center align-items-center rounded-2"
+                class="bi bi-list rounded-0 h-50 m-3 glass text-white d-lg-none d-flex align-self-center align-items-center rounded-2"
                 :disabled="false"
             />
-            <ul class="main__nav-list col-12 d-none d-sm-flex flex-sm-column gap-5 pt-5 pt-md-1">
+            <ul class="main__nav-list col-12 d-none d-lg-flex flex-sm-column gap-5 pt-5 pt-md-1">
                 <ButtonComponent
                     v-for="(item, index) in props.navComponent"
                     :key="index"

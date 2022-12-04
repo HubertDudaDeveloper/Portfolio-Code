@@ -6,9 +6,9 @@
     <HeroComponent
       :heroComponent="heroComponent"
     />
-    <section id="hexagon" class="hexagon position-relative d-flex flex-sm-row flex-column justify-content-center align-items-center text-white vh-100">
+    <section id="hexagon" class="hexagon position-relative d-flex flex-lg-row flex-column justify-content-center align-items-center text-white vh-100">
       <div class="col-3 p-5 p-sm-0 d-none d-sm-block"></div>
-      <article class="col-sm-3 col-12 p-5 h-50">
+      <article class="col-lg-3 col-12 p-5 h-50">
         <h2>Technologie</h2>
         <p><em>aspiu efyroieuwar fasliku dfhoaiu hewfaerfi ousahdbfo viubhu asphoidujv piasdujfho apisufh oliasudFHO IUQYEW OIASDGHFVO IUASYDpaius fghi</em></p>
       </article>
