@@ -33,7 +33,7 @@ const props = defineProps({
 })
 
 const screen = computed(() => {
-  return window.screen.width >= 1024
+  return window.screen.width <= 1024
 })
 
 const resizeBar = (event) => {
